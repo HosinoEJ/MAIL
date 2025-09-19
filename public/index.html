@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>邮件发送客户端</title>
+    <title>HosinoEJ的MAIL發射器</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -37,9 +37,9 @@
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <header class="mb-8 text-center">
             <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mb-2">
-                <i class="fa fa-envelope-o text-primary mr-2"></i>邮件发送客户端
+                <i class="fa fa-envelope-o text-primary mr-2"></i>HosinoEJ的MAIL發射器
             </h1>
-            <p class="text-gray-600">简单、快速地发送邮件</p>
+            <p class="text-gray-600">吵死你不喜歡看郵箱的朋友</p>
         </header>
 
         <div class="bg-white rounded-xl shadow-soft p-6 mb-6 transform transition-all duration-300 hover:shadow-lg">
@@ -56,13 +56,13 @@
                             name="to" 
                             required
                             class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
-                            placeholder="收件人邮箱地址"
+                            placeholder="收件人郵箱"
                         >
                     </div>
                 </div>
 
                 <div>
-                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主題</label>
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
                             <i class="fa fa-header"></i>
@@ -73,7 +73,7 @@
                             name="subject" 
                             required
                             class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none"
-                            placeholder="邮件主题"
+                            placeholder="郵件主題"
                         >
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         name="text" 
                         rows="8" 
                         class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all outline-none resize-none"
-                        placeholder="请输入邮件内容..."
+                        placeholder="請輸入郵件內容..."
                     ></textarea>
                 </div>
 
@@ -96,7 +96,7 @@
                         class="w-full bg-primary hover:bg-secondary text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                     >
                         <i class="fa fa-paper-plane"></i>
-                        <span>发送邮件</span>
+                        <span>發送郵件</span>
                     </button>
                 </div>
             </form>
@@ -154,11 +154,11 @@
                 } catch (error) {
                     statusMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
                     statusMessage.classList.add('bg-red-100', 'text-red-700');
-                    statusMessage.innerHTML = `<i class="fa fa-exclamation-circle mr-2"></i>发送失败: ${error.message}`;
+                    statusMessage.innerHTML = `<i class="fa fa-exclamation-circle mr-2"></i>發送失敗: ${error.message}`;
                 } finally {
                     // 恢复按钮状态
                     sendBtn.disabled = false;
-                    sendBtn.innerHTML = '<i class="fa fa-paper-plane"></i><span>发送邮件</span>';
+                    sendBtn.innerHTML = '<i class="fa fa-paper-plane"></i><span>發送郵件</span>';
                 }
             });
         });
